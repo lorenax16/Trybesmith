@@ -8,8 +8,9 @@ const create: RequestHandler = async (req, res) => {
   return res.status(201).json(productCreated);
 };
 
-const getAll = () => {
-
+const getAll:RequestHandler = async (_req, res) => {
+  const product = await ProductServer.getAll();
+  return res.status(200).json(product);
 };
 
 export { create, getAll };
