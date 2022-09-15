@@ -3,8 +3,8 @@ import * as userService from '../servers/userService';
 
 const create: RequestHandler = async (req, res) => {
   const user = req.body;
-  const Users = await userService.create(user);
-  return res.status(201).json({ token: Users });
+  const UserCreated = await userService.create(user);
+  return res.status(201).json({ token: UserCreated });
 };
 
 const getAll = async () => {
