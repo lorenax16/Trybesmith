@@ -7,9 +7,4 @@ const create: RequestHandler = async (req, res) => {
   return res.status(201).json({ token: Users });
 };
 
-const getAll:RequestHandler = async (_req, _res) => {
-  // const user = await userService.getAll();
-  // return res.status(200).json(user);
-};
-
-export default { create, getAll };
+export default create;
