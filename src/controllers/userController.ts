@@ -7,4 +7,7 @@ const create: RequestHandler = async (req, res) => {
   return res.status(201).json({ token: Users });
 };
 
-export default create;
+const getAll = async () => {
+};
+
+export default { create, getAll };
