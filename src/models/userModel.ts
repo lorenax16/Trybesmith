@@ -11,7 +11,7 @@ const create = async (user: User): Promise<User> => {
   );
   const [dataInserted] = result;
   const { insertId } = dataInserted;
-  return { id: insertId, ...user };
+  return { id: insertId, ...user }; 
 };
 
 const getAll = async () => {
