@@ -6,7 +6,7 @@ import user from '../types/users';
 dotenv.config();
 // require('dotenv').config();
 
-const JWT_SECRET = process.env as { JWT_SECRET: jwt.Secret };
+const JWT_SECRET = process.env as { JWT_SECRET: jwt.Secret } || 'secret';
 const JWT_OPTIONS: SignOptions = { algorithm: 'HS256', expiresIn: '1d' };
 
 const createToken = (data: user) => {
